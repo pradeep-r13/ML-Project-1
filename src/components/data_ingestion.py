@@ -1,4 +1,3 @@
-from email import header
 import os
 import sys
 from src.exception import CustomException
@@ -41,9 +40,6 @@ class DataIngestion:
 
             test_set.to_csv(self.ingestion_config.test_data_path,
                             index=True, header=True)
-
-            train_set.to_csv(
-                self.ingestion_config.train_data_path, index=True, header=True)
 
             logging.info('Ingestion of the data is completed')
 
